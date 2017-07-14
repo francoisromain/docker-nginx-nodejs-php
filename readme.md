@@ -2,7 +2,7 @@
 
 Related to [this article on Medium](https://medium.com/@francoisromain/setup-node-js-apache-and-an-nginx-reverse-proxy-with-docker-1f5a5cb3e71e).
 
-    $ git clone && cd docker-nginx-nodejs-apache
+    $ git clone https://github.com/francoisromain/docker-nginx-nodejs-php.git && cd docker-nginx-nodejs-php
     $ docker-compose up
 
 Go to http://localhost:8000 and see the result: 
