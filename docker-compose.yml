@@ -1,0 +1,32 @@
+version: "3.1"
+
+services:
+  
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./php/content:/srv/www/content
+      - ./static:/srv/www/static
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php:php-app
+      - nodejs:nodejs-app
+
+  nodejs:
+    image: node:alpine
+    environment: 
+      NODE_ENV: production
+    working_dir: /home/app
+    restart: always
+    volumes:
+      - ./nodejs:/home/app
+    links:
+      - php:php-app
+    command: ["node", "index"]
+
+  php:
+    image: php:apache
+    volumes:
+      - ./php:/var/www/html
