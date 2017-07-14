@@ -1,6 +1,6 @@
-Setup Node.js, Apache and an nginx reverse-proxy with Docker
+# Setup Node.js, Apache and an nginx reverse-proxy with Docker
 
-From (this article on Medium)[https://medium.com/@francoisromain/setup-node-js-apache-and-an-nginx-reverse-proxy-with-docker-1f5a5cb3e71e]
+Related to [this article on Medium](https://medium.com/@francoisromain/setup-node-js-apache-and-an-nginx-reverse-proxy-with-docker-1f5a5cb3e71e).
 
     $ git clone && cd docker-nginx-nodejs-apache
     $ docker-compose up
