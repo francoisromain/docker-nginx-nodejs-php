@@ -1,7 +1,7 @@
 // Let's try to keep this under 100 lines.
 const http = require('http')
 const port = 8080
-const apiUrl = 'http://php-app:80/api/'
+const apiUrl = 'http://php:80/api/'
 
 // Get data from the Api
 // Just a promise wrapper for http.get

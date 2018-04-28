@@ -10,9 +10,9 @@ services:
       - ./php/content:/srv/www/content
       - ./static:/srv/www/static
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    links:
-      - php:php-app
-      - nodejs:nodejs-app
+    depends_on:
+      - php
+      - nodejs
 
   nodejs:
     image: node:alpine
@@ -22,8 +22,8 @@ services:
     restart: always
     volumes:
       - ./nodejs:/home/app
-    links:
-      - php:php-app
+    depends_on:
+      - php
     command: ["node", "index"]
 
   php:
